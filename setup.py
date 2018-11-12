@@ -11,7 +11,7 @@ from setuptools import setup
 #                Bumping Minor means API bugfix or new functionality.
 #                Bumping Micro means CLI change of any kind unless it is
 #                    significant enough to warrant a minor/major bump.
-version = '1.0.1'
+version = '1.1.0'
 
 
 setup(name='batterytender',
@@ -27,7 +27,4 @@ setup(name='batterytender',
       install_requires=['requests>=1.0.0',
                         'ttldict',
                         'python-dateutil'],
-      entry_points={
-          'console_scripts': ['batterytender=batterytender.command_line:main'],
-      }
       )
