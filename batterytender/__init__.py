@@ -28,10 +28,9 @@ import requests.auth
 import ttldict
 
 
-# NOTE(jkoelker) Althogh the mobile app uses http, the endpoint supports https
-#                so we use that, because, you know, its 2018
-HOST = 'https://btconnectedpower.com'
+HOST = 'http://btconnectedpower.com'
 LOGIN_PATH = '/api/users/login'
+AUTHENTICATE_PATH = '/api/users/authenticate'
 CHARGER_PATH = '/api/charger/status'
 MONITOR_PATH = '/api/monitor/status'
 
@@ -288,7 +287,7 @@ class BatteryTender(object):
     def refresh_cache(self):
         # NOTE(jkoelker) Hit login without the params to trigger
         #                initial login and callback
-        self._request('POST', LOGIN_PATH)
+        self._request('POST', AUTHENTICATE_PATH)
 
     @property
     def chargers(self):
