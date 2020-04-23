@@ -28,7 +28,7 @@ import requests.auth
 import ttldict
 
 
-HOST = 'http://btconnectedpower.com'
+HOST = 'https://balanced.deltranconnected.com'
 LOGIN_PATH = '/api/users/login'
 AUTHENTICATE_PATH = '/api/users/authenticate'
 CHARGER_PATH = '/api/charger/status'
